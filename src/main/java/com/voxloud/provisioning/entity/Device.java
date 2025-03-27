@@ -1,14 +1,15 @@
 package com.voxloud.provisioning.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
-
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
+@Table(name = "device")
 @Data
 public class Device {
 
@@ -23,12 +24,9 @@ public class Device {
     @Column(name = "override_fragment")
     private String overrideFragment;
 
+    @Column(nullable = false)
     private String username;
 
+    @Column(nullable = false)
     private String password;
-
-    public enum DeviceModel {
-        CONFERENCE,
-        DESK
-    }
 }

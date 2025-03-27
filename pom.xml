@@ -11,8 +11,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.5.RELEASE</version>
+        <version>3.4.4</version>
     </parent>
+
+    <properties>
+        <java.version>21</java.version>
+    </properties>
 
     <build>
         <plugins>
@@ -43,5 +47,4 @@
             <scope>runtime</scope>
         </dependency>
     </dependencies>
-
 </project>
